@@ -1,0 +1,1 @@
+# Aturan-dan-sanksi-R47
