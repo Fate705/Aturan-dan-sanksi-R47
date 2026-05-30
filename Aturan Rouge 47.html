@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KODIFIKASI ATURAN INTERNAL R47</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            background-color: #0b0c0e;
+            color: #b9bbbe;
+            padding: 30px 15px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #1e2024;
+        }
+
+        header h1 {
+            font-size: 20px;
+            color: #fff;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        header p {
+            font-size: 13px;
+            color: #72767d;
+            font-weight: 500;
+        }
+
+        .search-container {
+            margin-bottom: 20px;
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 12px 16px;
+            background-color: #111214;
+            border: 1px solid #202225;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 14px;
+            outline: none;
+        }
+
+        .search-box:focus {
+            border-color: #4f545c;
+        }
+
+        .filter-container {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background-color: #111214;
+            border: 1px solid #202225;
+            color: #72767d;
+            padding: 6px 12px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background-color: #2f3136;
+            color: #fff;
+            border-color: #4f545c;
+        }
+
+        .section-title {
+            font-size: 13px;
+            color: #72767d;
+            margin: 35px 0 12px 0;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border-bottom: 1px solid #1e2024;
+            padding-bottom: 5px;
+        }
+
+        .card {
+            background-color: #111214;
+            border: 1px solid #202225;
+            border-radius: 4px;
+            padding: 16px;
+            margin-bottom: 14px;
+        }
+
+        .card-meta {
+            font-size: 11px;
+            font-weight: 700;
+            color: #4f545c;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+        }
+
+        .card-body {
+            font-size: 14px;
+            color: #dcddde;
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+
+        .sanksi-section {
+            background-color: #1c1414;
+            border-left: 2px solid #f04747;
+            padding: 8px 12px;
+            border-radius: 2px;
+            font-size: 13px;
+            color: rgba(220, 221, 222, 0.85);
+        }
+
+        .sanksi-title {
+            color: #f04747;
+            font-weight: 700;
+            margin-bottom: 4px;
+            font-size: 11px;
+            text-transform: uppercase;
+        }
+
+        .empty-message {
+            text-align: center;
+            padding: 30px;
+            color: #72767d;
+            background-color: #111214;
+            border-radius: 4px;
+            border: 1px dashed #202225;
+            display: none;
+            font-size: 13px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            font-size: 11px;
+            color: #4f545c;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>KODIFIKASI ATURAN INTERNAL R47</h1>
+            <p>Sistem Validasi dan Regulasi Operasional Kolektif</p>
+        </header>
+
+        <div class="search-container">
+            <input type="text" id="searchBar" class="search-box" placeholder="Cari klausa, sanksi, atau wewenang aparat...">
+        </div>
+
+        <div class="filter-container">
+            <button class="filter-btn active" onclick="filterCat('all')">Semua Aturan</button>
+            <button class="filter-btn" onclick="filterCat('identitas')">01 / Identitas</button>
+            <button class="filter-btn" onclick="filterCat('adab')">02 / Protokol</button>
+            <button class="filter-btn" onclick="filterCat('activity')">03 / Aktivitas</button>
+        </div>
+
+        <div id="contentWrapper">
+            <!-- IDENTITAS R47 -->
+            <div class="rules-group" data-category="identitas">
+                <div class="section-title">§1. Protokol Identitas & Privasi Faksi</div>
+                
+                <div class="card">
+                    <div class="card-meta">Klausa Operasional 1.1</div>
+                    <div class="card-body">Seluruh personil yang berada dalam atribut/seragam dinas resmi diwajibkan tanpa pengecualian untuk mengenakan topeng penutup identitas wajah.</div>
+                    <div class="sanksi-section">
+                        <div class="sanksi-title">Tindakan Disiplin:</div>
+                        Akumulasi 'Warning' poin. Hak diskresi penolakan berlaku penuh jika penangkapan terjadi di luar yurisdiksi KanPol (Kantor Polisi). Apabila berada di area publik, pelepasan atribut wajib dilakukan secara tertutup tanpa adanya visibilitas dari pihak eksternal, terkecuali aparat penegak hukum.<br>
+                        <em>• Peninjauan lebih lanjut di bawah otoritas penuh: GodFather</em>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-meta">Klausa Operasional 1.2</div>
+                    <div class="card-body">Menjaga kerahasiaan materi, data strategis, dan pergerakan internal R47 agar tidak terekspos ke ranah publik.</div>
+                    <div class="sanksi-section">
+                        <div class="sanksi-title">Tindakan Disiplin:</div>
+                        Pemberian status 'Warning'. Eskalasi langkah penindakan berikutnya ditentukan secara kolektif melalui keputusan bersama.<br>
+                        <em>• Dewan Otoritas: GodFather & Underboss</em>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-meta">Klausa Operasional 1.3</div>
+                    <div class="card-body">Dilarang keras melafalkan tata nama "Rouge" secara langsung di area publik. Nomenklatur resmi yang diizinkan adalah pembacaan kode spesifik: <strong>"R fourty seven"</strong> atau <strong>"Four seven"</strong>.</div>
+                    <div class="sanksi-section">
+                        <div class="sanksi-title">Tindakan Disiplin:</div>
+                        Pemberian Teguran Ringan secara lisan/tertulis.
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-meta">Klausa Operasional 1.4</div>
+                    <div class="card-body">Penyebaran aset, logistik, atau properti intelektual milik R47 ke luar ekosistem internal (baik bersifat Publik maupun Semi-publik) dilarang secara absolut.</div>
+                </div>
+            </div>
+
+            <!-- ADAB DAN TATA KRAMA -->
+            <div class="rules-group" data-category="adab">
+                <div class="section-title">§2. Kode Etik, Komunikasi & Diplomasi</div>
+
+                <div class="card">
+                    <div class="card-meta">Klausa Etik 2.1</div>
+                    <div class="card-body">Apabila koordinasi sedang dipimpin oleh jajaran Leader atau terdapat pemaparan informasi krusial, seluruh anggota diwajibkan menghentikan pembicaraan (kondisi senyap).</div>
+                    <div class="sanksi-section">
+                        <div class="sanksi-title">Tindakan Disiplin:</div>
+                        Interupsi atau pembahasan materi tidak relevan saat forum berlangsung berkonsekuensi pada Teguran Ringan.<br>
+                        <em>• Eksekutor Penindak: GodFather, Underboss, Commander</em>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-meta">Klausa Etik 2.2</div>
+                    <div class="card-body">Ketika didapati adanya personil yang sedang melakukan komunikasi via telepon, anggota lain wajib menjaga ketertiban dan tidak menimbulkan distorsi suara.</div>
+                    <div class="sanksi-section">
+                        <div class="sanksi-title">Tindakan Disiplin:</div>
+                        Teguran Ringan.<br>
+                        <em>• Eksekutor Penindak: Commander</em>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-meta">Klausa Etik 2.3</div>
+                    <div class="card-body">Dalam skenario interaksi diplomatik (didatangi oleh kelompok faksi lain), seluruh anggota wajib menjaga tata krama dan hak bicara atau negosiasi sepenuhnya dialihkan hanya kepada Leader.</div>
+                    <div class="sanksi-section">
+                        <div class="sanksi-title">Tindakan Disiplin:</div>
+                        Tindakan provokatif berupa pemukulan, cercaan, atau segala bentuk pemicu konflik (ragebait) baik terhadap faksi luar maupun internal, berakibat pada pembekuan hak distribusi suplai/resource dari faksi 47 selama 4 hari kalender. Kebijakan lanjutan akan ditinjau kembali.<br>
+                        <em>• Dewan Otoritas: GodFather & Underboss</em>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ACTIVITY -->
+            <div class="rules-group" data-category="activity">
+                <div class="section-title">§3. Regulasi Aktivitas & Mobilisasi Lapangan</div>
+
+                <div class="card">
+                    <div class="card-meta">Klausa Taktis 3.1</div>
+                    <div class="card-body">Kepatuhan mutlak terhadap instruksi, komando, dan penugasan langsung yang dikeluarkan oleh jajaran Leader saat mobilisasi faksi berjalan.</div>
+                    <div class="sanksi-section">
+                        <div class="sanksi-title">Tindakan Disiplin:</div>
+                        Pemberian status 'Warn' formal dan pelaporan catatan pelanggaran.<br>
+                        <em>• Dewan Otoritas: GodFather & Underboss</em>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-meta">Klausa Taktis 3.2</div>
+                    <div class="card-body">Baik jajaran Anggota maupun Leader dilarang keras menyalahgunakan kanal frekuensi radio atau ruang kumpul untuk membahas informasi di luar kepentingan operasional utama faksi.</div>
+                    <div class="sanksi-section">
+                        <div class="sanksi-title">Tindakan Disiplin:</div>
+                        Teguran Tingkat Sedang.<br>
+                        <em>• Eksekutor Penindak: Commander</em>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-meta">Klausa Taktis 3.3</div>
+                    <div class="card-body">Ketidakhadiran dalam agenda faksi tanpa adanya konfirmasi izin valid (prosedur dispensasi) kepada jajaran Leader sebelum mobilisasi dimulai.</div>
+                    <div class="sanksi-section">
+                        <div class="sanksi-title">Tindakan Disiplin:</div>
+                        Kelalaian atau hilangnya kontak tanpa keterangan jelas dalam kurun waktu 1x24 jam akan langsung dijatuhi tindakan tegas secara kolektif.<br>
+                        <em>• Panel Penindak: GodFather, Underboss, Commander</em>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="noResults" class="empty-message">Klausa regulasi atau kata kunci sanksi tidak ditemukan dalam basis data.</div>
+
+        <footer>
+            <p>R47 INTERNAL DOCUMENTATION &copy; 2026</p>
+        </footer>
+    </div>
+
+    <script>
+        const searchBar = document.getElementById('searchBar');
+        const groups = document.querySelectorAll('.rules-group');
+        const noResults = document.getElementById('noResults');
+        let activeCategory = 'all';
+
+        searchBar.addEventListener('input', filterRules);
+
+        function filterRules() {
+            const query = searchBar.value.toLowerCase().trim();
+            let totalMatch = 0;
+
+            groups.forEach(group => {
+                const groupCat = group.getAttribute('data-category');
+                let matchInGroup = false;
+
+                if (activeCategory !== 'all' && groupCat !== activeCategory) {
+                    group.style.display = 'none';
+                    return;
+                }
+
+                const cards = group.querySelectorAll('.card');
+                cards.forEach(card => {
+                    const text = card.textContent.toLowerCase();
+                    if (text.includes(query)) {
+                        card.style.display = 'block';
+                        matchInGroup = true;
+                        totalMatch++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                group.style.display = matchInGroup ? 'block' : 'none';
+            });
+
+            noResults.style.display = totalMatch === 0 ? 'block' : 'none';
+        }
+
+        function filterCat(cat) {
+            activeCategory = cat;
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+            filterRules();
+        }
+    </script>
+</body>
+</html>
